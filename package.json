@@ -1,16 +1,17 @@
 {
   "name": "data-processing-cli",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "tsx src/cli.ts",
     "build": "tsc -p .",
     "start": "node dist/cli.js",
-    "link": "eslint .",
+    "lint": "eslint .",
     "format": "prettier --write .",
     "check": "npm run lint && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tsx --test test/**/*.test.ts"
   },
   "keywords": [],
   "author": "Wladyslaw Pitsukha",
