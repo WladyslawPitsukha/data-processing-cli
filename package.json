@@ -1,0 +1,35 @@
+{
+  "name": "data-processing-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsc -p .",
+    "start": "node dist/cli.js",
+    "link": "eslint .",
+    "format": "prettier --write .",
+    "check": "npm run lint && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Wladyslaw Pitsukha",
+  "email": "pitsukhavladislav@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@typescript-eslint/eslint-plugin": "^8.64.0",
+    "@typescript-eslint/parser": "^8.64.0",
+    "eslint": "^10.7.0",
+    "prettier": "^3.9.5",
+    "tsx": "^4.23.1",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^15.0.0",
+    "csv-parse": "^7.0.1",
+    "ora": "^9.4.1",
+    "zod": "^4.4.3"
+  }
+}
