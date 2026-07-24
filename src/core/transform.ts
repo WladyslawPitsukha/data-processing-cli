@@ -33,9 +33,27 @@ export function transformRows(rawRows: any[]): ProcessResult {
         
         const r = parsed.data;
 
-        const normalizedName = r.name.trim().toLowerCase();
         const amountWithTax = Number((r.amount * (1 + TAX_RATE)).toFixed(2));
-        
+        const normalizedAmount = Number(r.amount.toFixed(2));
+
+        rows.push({
+            ...r,
+            amountWithTax,
+            normalizedAmount
+        });
+
+        byCategory[r.category] = (byCategory[r.category] ?? 0) + r.amount;
     }
 
+    const totalAmount = Number(rows.reduce((sum, r) => sum + r.amount, 0).toFixed(2));
+    
+    return {
+        rows, invalid, summary: {
+            totalRows: rawRows.length,
+            validRows: rows.length,
+            invalidRows: invalid.length,
+            totalAmount,
+            byCategory
+        }
+    }
 }

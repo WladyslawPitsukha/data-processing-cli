@@ -3,7 +3,7 @@ import { z } from "zod";
 export const InputRowSchema = z.object({
     id: z.coerce.number().int().positive(),
     name: z.string().min(1),
-    categoty: z.string().min(1),
+    category: z.string().min(1),
     amount: z.coerce.number().nonnegative(),
 });
 
