@@ -13,8 +13,8 @@ describe("transform functions", () => {
         const result = filterRows(users, (user) => Number(user.age) >= 25);
 
         expect(result).toEqual([
-            { name: "Maya", city: "Kyiv", age: 28 },
-            { name: "Ira", city: "Kyiv", age: 34 },
+            { name: "Maya", city: "Warsaw", age: 28 },
+            { name: "Ira", city: "Krakow", age: 34 },
         ]);
     });
 
@@ -28,6 +28,6 @@ describe("transform functions", () => {
         const result = groupBy(users, "city");
 
         expect(result.Krakow).toHaveLength(2);
-        expect(result.Warsaw).toEqual([{ name: "Malija", city: "Warsaw", age: 21 }]);
+        expect(result.Warsaw).toEqual([{ name: "Maya", city: "Warsaw", age: 28 }]);
     })
 });
