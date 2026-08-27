@@ -1,6 +1,6 @@
 import { createReadStream, createWriteStream } from "node:fs";
 import { createInterface } from "node:readline";
-import type { Dataset, Row } from "../types";
+import type { Dataset, Row } from "../types.js";
 
 export async function readCsv(path: string): Promise<Dataset> {
     const rl = createInterface({

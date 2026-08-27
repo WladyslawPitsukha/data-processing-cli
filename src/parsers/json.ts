@@ -1,5 +1,5 @@
 import { readFile, writeFile } from "node:fs/promises";
-import type { Dataset } from "../types";
+import type { Dataset } from "../types.js";
 
 export async function readJson(path: string): Promise<Dataset> {
     const content = await readFile(path, "utf-8");
