@@ -1,0 +1,22 @@
+{
+    "name": "data-processing-cli",
+    "version": "1.0.0",
+    "description": "A Node.js + TypeScript CLI for processing CSV/JSON data files",
+    "main": "dist/index.js",
+    "bin": {
+        "data-processing-cli": "dist/index.js"
+    },
+    "scripts": {
+        "dev": "tsx src/index.ts",
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "test": "vitest run"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^20.14.0",
+        "tsx": "^4.16.0",
+        "typescript": "^5.5.0",
+        "vitest": "^2.0.0"
+    }
+}
