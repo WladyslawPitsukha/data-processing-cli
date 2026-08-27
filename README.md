@@ -5,9 +5,9 @@ A command-line tool built with **Node.js** and **TypeScript** for processing dat
 ## Features
 
 - Convert between CSV and JSON formats
-- Filter, sort, and aggregate (sum/avg/group-by) tabular data
-- Stream-based processing to handle large files efficiently
+- Filter, sort, and group tabular data through reusable TypeScript functions
 - Type-safe codebase written in TypeScript
+- Unit tests with Vitest
 
 ## Tech Stack
 
